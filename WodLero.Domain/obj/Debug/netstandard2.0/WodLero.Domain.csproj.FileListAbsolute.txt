@@ -6,3 +6,4 @@ C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.
 C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\bin\Debug\netstandard2.0\WodLero.Domain.pdb
 C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.0\WodLero.Domain.dll
 C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.0\WodLero.Domain.pdb
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.0\WodLero.Domain.csprojAssemblyReference.cache

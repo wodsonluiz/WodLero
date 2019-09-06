@@ -24,14 +24,14 @@ namespace WodLero.Api.Controllers
         [Route("GetAll")]
         public IEnumerable<Phrases> GetAll()
         {
-            return phrasesRepository.GetAll(_config.GetConnectionString("ExemplosDapper"));
+            return phrasesRepository.GetAll(_config.GetConnectionString("ExemploDapperSqlServer"));
         }
 
         [HttpGet]
         [Route("GetById")]
         public Phrases GetById(int Id)
         {
-            return phrasesRepository.GetById(Id, _config.GetConnectionString("ExemplosDapper"));
+            return phrasesRepository.GetById(Id, _config.GetConnectionString("ExemploDapperSqlServer"));
         }
 
         [HttpPost]
@@ -40,7 +40,7 @@ namespace WodLero.Api.Controllers
         [ProducesResponseType(400)]
         public ActionResult Insert([FromBody]Phrases phrases)
         {
-            var result = phrasesRepository.Insert(phrases, _config.GetConnectionString("ExemplosDapper"));
+            var result = phrasesRepository.Insert(phrases, _config.GetConnectionString("ExemploDapperSqlServer"));
 
             if (result)
                 return StatusCode(201);
@@ -52,14 +52,14 @@ namespace WodLero.Api.Controllers
         [Route("Delete")]
         public bool Delete(int Id)
         {
-            return phrasesRepository.Delete(Id, _config.GetConnectionString("ExemplosDapper"));
+            return phrasesRepository.Delete(Id, _config.GetConnectionString("ExemploDapperSqlServer"));
         }
 
         [HttpPut]
         [Route("Update")]
         public bool Update([FromBody]Phrases phrases)
         {
-            return phrasesRepository.Update(phrases, _config.GetConnectionString("ExemplosDapper"));
+            return phrasesRepository.Update(phrases, _config.GetConnectionString("ExemploDapperSqlServer"));
         }
     }
 }

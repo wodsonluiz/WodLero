@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using WodLero.Domain.Entities;
 using WodLero.Domain.Interface;
 
@@ -14,7 +15,7 @@ namespace WodLero.Domain.Service
         {
             try
             {
-                using (MySqlConnection conexao = new MySqlConnection(_connection))
+                using (SqlConnection conexao = new SqlConnection(_connection))
                 {
                     var parametros = new DynamicParameters();
                     parametros.Add("Id", id, DbType.String);
@@ -34,7 +35,7 @@ namespace WodLero.Domain.Service
         {
             try
             {
-                using (MySqlConnection conexao = new MySqlConnection(_connection))
+                using (SqlConnection conexao = new SqlConnection(_connection))
                 {
                     return conexao.Query<Phrases>("Select * from Phrases");
                 }
@@ -49,7 +50,7 @@ namespace WodLero.Domain.Service
         {
             try
             {
-                using (MySqlConnection conexao = new MySqlConnection(_connection))
+                using (SqlConnection conexao = new SqlConnection(_connection))
                 {
                     var parametros = new DynamicParameters();
 
@@ -68,7 +69,7 @@ namespace WodLero.Domain.Service
         {
             try
             {
-                using (MySqlConnection conexao = new MySqlConnection(_connection))
+                using (SqlConnection conexao = new SqlConnection(_connection))
                 {
                     var parametros = new DynamicParameters();
                     parametros.Add("Descricao", phrases.Descricao, DbType.String);
@@ -94,7 +95,7 @@ namespace WodLero.Domain.Service
         {
             try
             {
-                using (MySqlConnection conexao = new MySqlConnection(_connection))
+                using (SqlConnection conexao = new SqlConnection(_connection))
                 {
                     var parametros = new DynamicParameters();
                     parametros.Add("Descricao", phrases.Descricao, DbType.String);

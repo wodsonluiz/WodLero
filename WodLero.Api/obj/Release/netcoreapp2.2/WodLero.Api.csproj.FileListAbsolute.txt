@@ -1,0 +1,17 @@
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\bin\Release\netcoreapp2.2\WodLero.Api.deps.json
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\bin\Release\netcoreapp2.2\WodLero.Api.runtimeconfig.json
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\bin\Release\netcoreapp2.2\WodLero.Api.runtimeconfig.dev.json
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\bin\Release\netcoreapp2.2\WodLero.Api.dll
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\bin\Release\netcoreapp2.2\WodLero.Api.pdb
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\bin\Release\netcoreapp2.2\WodLero.Domain.dll
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\bin\Release\netcoreapp2.2\WodLero.Domain.pdb
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.csprojAssemblyReference.cache
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.csproj.CoreCompileInputs.cache
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.RazorAssemblyInfo.cache
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.RazorAssemblyInfo.cs
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.AssemblyInfoInputs.cache
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.AssemblyInfo.cs
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.RazorTargetAssemblyInfo.cache
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.csproj.CopyComplete
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.dll
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Api\obj\Release\netcoreapp2.2\WodLero.Api.pdb
