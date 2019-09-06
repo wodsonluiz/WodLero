@@ -1,0 +1,8 @@
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\bin\Debug\netstandard2.0\WodLero.Domain.deps.json
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\bin\Debug\netstandard2.0\WodLero.Domain.dll
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.0\WodLero.Domain.csproj.CoreCompileInputs.cache
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.0\WodLero.Domain.AssemblyInfoInputs.cache
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.0\WodLero.Domain.AssemblyInfo.cs
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\bin\Debug\netstandard2.0\WodLero.Domain.pdb
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.0\WodLero.Domain.dll
+C:\Users\wodson.correia\Documents\WodLero\WodLero.Domain\obj\Debug\netstandard2.0\WodLero.Domain.pdb
