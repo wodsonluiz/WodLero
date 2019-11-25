@@ -1,9 +1,10 @@
 ﻿using Dapper;
-using MySql.Data.MySqlClient;
+using Polly;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 using WodLero.Domain.Entities;
 using WodLero.Domain.Interface;
 
@@ -11,7 +12,7 @@ namespace WodLero.Domain.Service
 {
     public class PhrasesRepository : IPhrasesRepository
     {
-        public bool Delete(int id, string _connection)
+        public async Task<bool> Delete(int id, string _connection)
         {
             try
             {
@@ -20,33 +21,37 @@ namespace WodLero.Domain.Service
                     var parametros = new DynamicParameters();
                     parametros.Add("Id", id, DbType.String);
 
-                    conexao.Execute("Delete Phrases where Id = @Id", parametros);
+                    await Policy.Handle<Exception>()
+                        .WaitAndRetryAsync(2, i => TimeSpan.FromSeconds(1))
+                        .ExecuteAsync(async () => await conexao.ExecuteAsync("Delete Phrases where Id = @Id", parametros));
                 }
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
         }
 
-        public IEnumerable<Phrases> GetAll(string _connection)
+        public async Task<IEnumerable<Phrases>> GetAll(string _connection)
         {
             try
             {
                 using (SqlConnection conexao = new SqlConnection(_connection))
                 {
-                    return conexao.Query<Phrases>("Select * from Phrases");
+                    return await Policy.Handle<Exception>()
+                        .WaitAndRetryAsync(2, i => TimeSpan.FromSeconds(1))
+                        .ExecuteAsync(async () => await conexao.QueryAsync<Phrases>("Select * from Phrases"));
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
         }
 
-        public Phrases GetById(int id, string _connection)
+        public async Task<Phrases> GetById(int id, string _connection)
         {
             try
             {
@@ -56,16 +61,18 @@ namespace WodLero.Domain.Service
 
                     parametros.Add("Id", id, DbType.Int32);
 
-                    return conexao.QueryFirstOrDefault<Phrases>("Select * from Phrases where Id = @Id", parametros);
+                    return await Policy.Handle<Exception>()
+                        .WaitAndRetryAsync(2, i => TimeSpan.FromSeconds(1))
+                        .ExecuteAsync(async () => await conexao.QueryFirstOrDefaultAsync<Phrases>("Select * from Phrases where Id = @Id", parametros));
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
         }
 
-        public bool Insert(Phrases phrases, string _connection)
+        public async Task<bool> Insert(Phrases phrases, string _connection)
         {
             try
             {
@@ -79,19 +86,21 @@ namespace WodLero.Domain.Service
 
                     conexao.Open();
 
-                    conexao.Execute("Insert into Phrases(Descricao,Status,Data_Registro,Autor)" +
-                         "values(@Descricao, @Status, @Data_Registro, @Autor)", parametros);
+                    await Policy.Handle<Exception>()
+                        .WaitAndRetryAsync(2, i => TimeSpan.FromSeconds(1))
+                        .ExecuteAsync(async () => await conexao.ExecuteAsync("Insert into Phrases(Descricao,Status,Data_Registro,Autor)" +
+                         "values(@Descricao, @Status, @Data_Registro, @Autor)", parametros));
 
                     return true;
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception)
             {
                 return false;
             }
         }
 
-        public bool Update(Phrases phrases, string _connection)
+        public async Task<bool> Update(Phrases phrases, string _connection)
         {
             try
             {
@@ -104,10 +113,13 @@ namespace WodLero.Domain.Service
                     parametros.Add("Autor", phrases.Autor, DbType.String);
                     parametros.Add("Id", phrases.Id, DbType.Int32);
 
-                    conexao.Execute("Update Phrases set Descricao = @Descricao, Status = @Status, Data_Registro = @Data_Registro, Autor = @Autor where Id = @Id", parametros);
+                    await Policy.Handle<Exception>()
+                        .WaitAndRetryAsync(2, i => TimeSpan.FromSeconds(1))
+                        .ExecuteAsync(async () => await conexao.ExecuteAsync("Update Phrases set Descricao = @Descricao, Status = @Status, Data_Registro = @Data_Registro, Autor = @Autor where Id = @Id",
+                        parametros));
                 };
             }
-            catch (System.Exception ex)
+            catch (Exception)
             {
                 return false;
             }

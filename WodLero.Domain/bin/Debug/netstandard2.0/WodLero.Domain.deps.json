@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "82477d98cdead68daf9b10f129d813a3ae3ba5f4"
+    "signature": "e91ab2c0fb606e5a8ef0f10af2a73b5ab2889eef"
   },
   "compilationOptions": {},
   "targets": {
@@ -16,6 +16,7 @@
           "Dommel": "1.11.0",
           "MySql.Data": "8.0.17",
           "NETStandard.Library": "2.0.3",
+          "Polly": "7.1.1",
           "System.Data.SqlClient": "4.6.1"
         },
         "runtime": {
@@ -149,6 +150,14 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Polly/7.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.1.1.0"
+          }
         }
       },
       "runtime.native.System/4.0.0": {
@@ -954,6 +963,13 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Polly/7.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okRGHVvn0bGCeMBgaCZShlSez8rxjgthyDf/NRTYsSh5kb8IbKnX7W15d3s95Kq9uzwj7tFYiXNrCvn6d0XoeA==",
+      "path": "polly/7.1.1",
+      "hashPath": "polly.7.1.1.nupkg.sha512"
     },
     "runtime.native.System/4.0.0": {
       "type": "package",

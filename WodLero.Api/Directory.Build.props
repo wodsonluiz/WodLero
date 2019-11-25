@@ -1,0 +1,14 @@
+﻿<Project>
+  <PropertyGroup>
+    <Version>0.0.0</Version>
+    <Company>WodLero</Company>
+    <Copyright>WodLero ©</Copyright>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="GitVersionTask" Version="5.0.2-beta1.99">
+        <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+</Project>

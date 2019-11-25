@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WodLero.Api</name>
+    </assembly>
+    <members>
+        <member name="M:WodLero.Api.Controllers.PhrasesController.GetAll">
+            <summary>
+            GetAll
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WodLero.Api.Controllers.PhrasesController.GetById(System.Int32)">
+            <summary>
+            GetById
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WodLero.Api.Controllers.PhrasesController.Insert(WodLero.Domain.Entities.Phrases)">
+             <summary>
+             Insert a Phrases.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    "Id": 0,
+                    "Descricao":"",
+                    "Status":"",
+                    "Data_Registro":"",
+                    "Autor":""
+                 }
+            
+             </remarks>
+             <returns>A newly created Phrases</returns>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null</response> 
+        </member>
+        <member name="M:WodLero.Api.Controllers.PhrasesController.Delete(System.Int32)">
+            <summary>
+            Delete Phrases
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WodLero.Api.Controllers.PhrasesController.Update(WodLero.Domain.Entities.Phrases)">
+             <summary>
+             Update a Phrases.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                POST /Todo
+                 {
+                    "Id": 0,
+                    "Descricao":"",
+                    "Status":"",
+                    "Data_Registro":"",
+                    "Autor":""
+                 }
+            
+             </remarks>
+             <returns>A newly Update Phrases</returns>
+             <response code="200">Returns the newly created item</response>
+             <response code="400">If the item is null</response>  
+        </member>
+    </members>
+</doc>

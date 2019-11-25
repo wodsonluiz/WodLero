@@ -177,6 +177,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Polly/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {}
+        }
+      },
       "runtime.native.System/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1529,6 +1538,21 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Polly/7.1.1": {
+      "sha512": "okRGHVvn0bGCeMBgaCZShlSez8rxjgthyDf/NRTYsSh5kb8IbKnX7W15d3s95Kq9uzwj7tFYiXNrCvn6d0XoeA==",
+      "type": "package",
+      "path": "polly/7.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.7.1.1.nupkg.sha512",
+        "polly.nuspec"
       ]
     },
     "runtime.native.System/4.0.0": {
@@ -4616,6 +4640,7 @@
       "Dommel >= 1.11.0",
       "MySql.Data >= 8.0.17",
       "NETStandard.Library >= 2.0.3",
+      "Polly >= 7.1.1",
       "System.Data.SqlClient >= 4.6.1"
     ]
   },
@@ -4644,9 +4669,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://10.0.8.181:8080/api/odata": {},
-        "http://nuget.novitech.net.br/nuget": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://nugetsp.bemobi.com.br/nuget": {}
       },
       "frameworks": {
         "netstandard2.0": {
@@ -4691,6 +4714,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "Polly": {
+            "target": "Package",
+            "version": "[7.1.1, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",

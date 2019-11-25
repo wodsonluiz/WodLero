@@ -16,6 +16,48 @@
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
+      "Brotli.NET/2.0.4.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Brotli.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Brotli.Core.dll": {}
+        },
+        "build": {
+          "build/Brotli.NET.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/brolib_x64.so": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/linux/native/brolib_x86.so": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/osx/native/brolib_x64.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/win/native/brolib_x64.dll": {
+            "assetType": "native",
+            "rid": "win"
+          },
+          "runtimes/win/native/brolib_x64.pdb": {
+            "assetType": "native",
+            "rid": "win"
+          },
+          "runtimes/win/native/brolib_x86.dll": {
+            "assetType": "native",
+            "rid": "win"
+          },
+          "runtimes/win/native/brolib_x86.pdb": {
+            "assetType": "native",
+            "rid": "win"
+          }
+        }
+      },
       "Dapper/2.0.4": {
         "type": "package",
         "dependencies": {
@@ -79,6 +121,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/Dommel.dll": {}
+        }
+      },
+      "GitVersionTask/5.1.3-beta1.29": {
+        "type": "package",
+        "build": {
+          "build/GitVersionTask.props": {},
+          "build/GitVersionTask.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/GitVersionTask.props": {},
+          "buildMultiTargeting/GitVersionTask.targets": {}
         }
       },
       "Google.Protobuf/3.6.1": {
@@ -1893,6 +1946,17 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Extensions.ApiDescription.Server.props": {},
+          "build/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props": {},
+          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2808,6 +2872,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.OpenApi/1.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -2999,6 +3072,15 @@
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "Polly/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3273,6 +3355,63 @@
         },
         "runtime": {
           "lib/netstandard1.3/SshNet.Security.Cryptography.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore/5.0.0-rc4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0-rc4",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.0.0-rc4",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.0.0-rc4"
+        },
+        "build": {
+          "build/Swashbuckle.AspNetCore.props": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/5.0.0-rc4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
+          "Microsoft.OpenApi": "1.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/5.0.0-rc4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.0.0",
+          "Microsoft.OpenApi": "1.1.1",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0-rc4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/5.0.0-rc4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Routing": "2.0.0",
+          "Microsoft.AspNetCore.StaticFiles": "2.0.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "2.0.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -5030,6 +5169,7 @@
           "Dapper.FluentMap.Dommel": "1.7.0",
           "Dommel": "1.11.0",
           "MySql.Data": "8.0.17",
+          "Polly": "7.1.1",
           "System.Data.SqlClient": "4.6.1"
         },
         "compile": {
@@ -5067,6 +5207,29 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "lib/xamarinios/BouncyCastle.Crypto.dll",
         "lib/xamarinios/BouncyCastle.Crypto.xml"
+      ]
+    },
+    "Brotli.NET/2.0.4.2": {
+      "sha512": "1V7TTToTsHJEFJSn9ugCgRhx78k+bU9yysDVohd6A27qEBefk1LcOU44YsWl3XJUiAMsdwrynMXTb5YF+pODaw==",
+      "type": "package",
+      "path": "brotli.net/2.0.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "brotli.net.2.0.4.2.nupkg.sha512",
+        "brotli.net.nuspec",
+        "build/Brotli.NET.targets",
+        "lib/net35/Brotli.Core.dll",
+        "lib/net40/Brotli.Core.dll",
+        "lib/net45/Brotli.Core.dll",
+        "lib/netstandard2.0/Brotli.Core.dll",
+        "runtimes/linux/native/brolib_x64.so",
+        "runtimes/linux/native/brolib_x86.so",
+        "runtimes/osx/native/brolib_x64.dylib",
+        "runtimes/win/native/brolib_x64.dll",
+        "runtimes/win/native/brolib_x64.pdb",
+        "runtimes/win/native/brolib_x86.dll",
+        "runtimes/win/native/brolib_x86.pdb"
       ]
     },
     "Dapper/2.0.4": {
@@ -5144,6 +5307,67 @@
         "lib/netstandard1.3/Dommel.xml",
         "lib/netstandard2.0/Dommel.dll",
         "lib/netstandard2.0/Dommel.xml"
+      ]
+    },
+    "GitVersionTask/5.1.3-beta1.29": {
+      "sha512": "ZA+EaiSANei2UOrm1J4lid1AeR6O2z7DxAxkCwDw1p7CCO8IQoBoquj0zz2/lzzUDJS65LO95WjOc6nXF77WqQ==",
+      "type": "package",
+      "path": "gitversiontask/5.1.3-beta1.29",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/GitVersionTask.props",
+        "build/GitVersionTask.targets",
+        "buildMultiTargeting/GitVersionTask.props",
+        "buildMultiTargeting/GitVersionTask.targets",
+        "gitversiontask.5.1.3-beta1.29.nupkg.sha512",
+        "gitversiontask.nuspec",
+        "tools/net472/GitVersionCore.dll",
+        "tools/net472/GitVersionCore.pdb",
+        "tools/net472/GitVersionCore.xml",
+        "tools/net472/GitVersionTask.MsBuild.dll",
+        "tools/net472/GitVersionTask.MsBuild.pdb",
+        "tools/net472/GitVersionTask.dll",
+        "tools/net472/GitVersionTask.pdb",
+        "tools/net472/LibGit2Sharp.dll",
+        "tools/net472/LibGit2Sharp.dll.config",
+        "tools/net472/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tools/net472/Microsoft.Extensions.DependencyInjection.dll",
+        "tools/net472/Microsoft.Extensions.Options.dll",
+        "tools/net472/Microsoft.Extensions.Primitives.dll",
+        "tools/net472/YamlDotNet.dll",
+        "tools/net472/lib/linux-x64/libgit2-7ce88e6.so",
+        "tools/net472/lib/osx/libgit2-7ce88e6.dylib",
+        "tools/net472/lib/win32/x64/git2-7ce88e6.dll",
+        "tools/net472/lib/win32/x86/git2-7ce88e6.dll",
+        "tools/netstandard2.0/GitVersionCore.dll",
+        "tools/netstandard2.0/GitVersionCore.pdb",
+        "tools/netstandard2.0/GitVersionCore.xml",
+        "tools/netstandard2.0/GitVersionTask.MsBuild.dll",
+        "tools/netstandard2.0/GitVersionTask.MsBuild.pdb",
+        "tools/netstandard2.0/GitVersionTask.deps.json",
+        "tools/netstandard2.0/GitVersionTask.dll",
+        "tools/netstandard2.0/GitVersionTask.pdb",
+        "tools/netstandard2.0/LibGit2Sharp.dll",
+        "tools/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tools/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "tools/netstandard2.0/Microsoft.Extensions.Options.dll",
+        "tools/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "tools/netstandard2.0/Newtonsoft.Json.dll",
+        "tools/netstandard2.0/YamlDotNet.dll",
+        "tools/netstandard2.0/runtimes/alpine-x64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/alpine.3.9-x64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/debian-arm64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/debian.9-x64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/fedora-x64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/linux-x64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/osx/native/libgit2-7ce88e6.dylib",
+        "tools/netstandard2.0/runtimes/rhel-x64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/ubuntu.16.04-arm64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/ubuntu.18.04-x64/native/libgit2-7ce88e6.so",
+        "tools/netstandard2.0/runtimes/win-x64/native/git2-7ce88e6.dll",
+        "tools/netstandard2.0/runtimes/win-x86/native/git2-7ce88e6.dll"
       ]
     },
     "Google.Protobuf/3.6.1": {
@@ -6755,6 +6979,33 @@
         "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
+    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+      "sha512": "LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
+      "type": "package",
+      "path": "microsoft.extensions.apidescription.server/3.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.Extensions.ApiDescription.Server.props",
+        "build/Microsoft.Extensions.ApiDescription.Server.targets",
+        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props",
+        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets",
+        "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+        "microsoft.extensions.apidescription.server.nuspec",
+        "tools/Newtonsoft.Json.dll",
+        "tools/dotnet-getdocument.deps.json",
+        "tools/dotnet-getdocument.dll",
+        "tools/dotnet-getdocument.runtimeconfig.json",
+        "tools/net461-x86/GetDocument.Insider.exe",
+        "tools/net461-x86/GetDocument.Insider.exe.config",
+        "tools/net461/GetDocument.Insider.exe",
+        "tools/net461/GetDocument.Insider.exe.config",
+        "tools/netcoreapp2.1/GetDocument.Insider.deps.json",
+        "tools/netcoreapp2.1/GetDocument.Insider.dll",
+        "tools/netcoreapp2.1/GetDocument.Insider.runtimeconfig.json"
+      ]
+    },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
       "sha512": "spsJkYo8gGJapaxTSQFN/wqA+ghpJMLwB4ZyTB+fSdpd7AmMFP/YSpIcGmczcw4KggpxLGhLk7lCkSIlgvHaqQ==",
       "type": "package",
@@ -7920,6 +8171,23 @@
         "version.txt"
       ]
     },
+    "Microsoft.OpenApi/1.1.1": {
+      "sha512": "96jr5MPyQ9WzxiBlTH2czVLwpOn7a7Y6j1vRHIZ4sIOFSAclPW2G+iQwnbw7rFBabTALiFJJ7q5Z5r8s+RmGvw==",
+      "type": "package",
+      "path": "microsoft.openapi/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/Microsoft.OpenApi.dll",
+        "lib/net46/Microsoft.OpenApi.pdb",
+        "lib/net46/Microsoft.OpenApi.xml",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.1.1.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
       "sha512": "wc71c9HWTeXy9/w9O4Yr2LKmdJjVyIoJ/XQX8/6uma4EAVU25RLtUWlvhA0gpgFw9Kf1TkCv70x+CbKnRw/d8Q==",
       "type": "package",
@@ -8554,6 +8822,21 @@
         "nuget.frameworks.nuspec"
       ]
     },
+    "Polly/7.1.1": {
+      "sha512": "okRGHVvn0bGCeMBgaCZShlSez8rxjgthyDf/NRTYsSh5kb8IbKnX7W15d3s95Kq9uzwj7tFYiXNrCvn6d0XoeA==",
+      "type": "package",
+      "path": "polly/7.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.7.1.1.nupkg.sha512",
+        "polly.nuspec"
+      ]
+    },
     "Remotion.Linq/2.2.0": {
       "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
@@ -8902,6 +9185,61 @@
         "lib/wp8/SshNet.Security.Cryptography.xml",
         "sshnet.security.cryptography.1.2.0.nupkg.sha512",
         "sshnet.security.cryptography.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore/5.0.0-rc4": {
+      "sha512": "jAgsEbL+1EIUdxtbkmINk9WEJCfG6vsoolJqGcypCI87NEZFTeaz8SZyUB3pXBcuogab2yr7Hi7dP0XyrfAPtQ==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore/5.0.0-rc4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Swashbuckle.AspNetCore.props",
+        "swashbuckle.aspnetcore.5.0.0-rc4.nupkg.sha512",
+        "swashbuckle.aspnetcore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/5.0.0-rc4": {
+      "sha512": "oZPhUbTeTgCiC7IbB0K9JNPOX2V2vr2ZNRXZdv4Qucg+AegOup5hsecghktsJ1/MrNFsLFmUULuXMjxCCmeX1w==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swagger/5.0.0-rc4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "swashbuckle.aspnetcore.swagger.5.0.0-rc4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/5.0.0-rc4": {
+      "sha512": "j0s+/BRIl5zRJu3wN+CXESU1FLYaDvFKWcLdX0ftGx4VtUGDf3aECX5UZvMReak6pb1O6fAU6felmDBEyfDyUg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggergen/5.0.0-rc4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "swashbuckle.aspnetcore.swaggergen.5.0.0-rc4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/5.0.0-rc4": {
+      "sha512": "38whGu1o32TAWPSODKQDXkOoTIluE8mDZ02mCsLXv+MfBY/c/BtdZ+XsFALGeWjWGU/ZqCT0lQN7ogvPbh84Yg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.0.0-rc4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "swashbuckle.aspnetcore.swaggerui.5.0.0-rc4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -13759,10 +14097,13 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Brotli.NET >= 2.0.4.2",
+      "GitVersionTask >= 5.1.3-beta1.29",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
+      "Swashbuckle.AspNetCore >= 5.0.0-rc4",
       "WodLero.Domain >= 1.0.0"
     ]
   },
@@ -13771,7 +14112,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "0.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\wodson.correia\\Documents\\WodLero\\WodLero.Api\\WodLero.Api.csproj",
       "projectName": "WodLero.Api",
@@ -13791,9 +14132,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://10.0.8.181:8080/api/odata": {},
-        "http://nuget.novitech.net.br/nuget": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://nugetsp.bemobi.com.br/nuget": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
@@ -13813,6 +14152,16 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "Brotli.NET": {
+            "target": "Package",
+            "version": "[2.0.4.2, )"
+          },
+          "GitVersionTask": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[5.1.3-beta1.29, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -13833,6 +14182,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.2.3, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[5.0.0-rc4, )"
           }
         },
         "imports": [
